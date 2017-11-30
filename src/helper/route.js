@@ -9,18 +9,17 @@ module.exports = async function (req, res, filePath) {
         if (stats.isFile()) {
             res.statusCode = 200;
             res.setHeader('Content-Type', 'text/plain');
-            //读内容很慢
+            // slow loding with read file
             // fs.readFile(filePath, (err, data) => {
             //     res.end(data);
             // }); 
-            // 流方式读比较快
+            // fast loding with stream
             fs.createReadStream(filePath).pipe(res);
         } else if (stats.isDirectory()) {
-            readdir(filePath, (err, files) => {
-                res.statusCode = 200;
-                res.setHeader('Content-Type', 'text/plain');
-                res.end(files.join(','));
-            });
+            const files = readdir(filePath);
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/plain');
+            res.end(files.join(','));
         }
     } catch(ex) {
         res.statusCode = 404;
