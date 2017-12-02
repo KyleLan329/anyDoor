@@ -13,7 +13,7 @@ node src/index.js -h localhost # set host as localhost
 
 # Get it
 ```
-npm i -g any_door
+git clone git@github.com:KyleLan329/anyDoor.git
 ```
 
 # Run it 
