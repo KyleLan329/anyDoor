@@ -1,11 +1,15 @@
 {
   "name": "any_door",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "nodeJS Web Server Demo",
-  "main": "index.js",
+  "main": "src/app.js",
+  "bin": {
+    "any_door": "bin/any_door"
+  },
   "scripts": {
     "lint": "eslint .",
-    "fix": "eslint --fix ."
+    "fix": "eslint --fix .",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,7 @@
     "eslint": "^4.12.0"
   },
   "dependencies": {
-    "chalk": "^2.3.0"
+    "chalk": "^2.3.0",
+    "yargs": "^10.0.3"
   }
 }

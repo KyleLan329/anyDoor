@@ -4,8 +4,9 @@ const mimeTypes = {
     'css': 'text/css',
     'html': 'text/html',
     'js': 'text/javascript',
-    'josn': 'text/json',
-    'jpg': 'image/jpeg'
+    'json': 'text/json',
+    'jpg': 'image/jpeg',
+    'txt': 'text/plain'
 };
 
 module.exports = (filePath) => {
