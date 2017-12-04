@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,29 @@
     <style>
         body {
             margin: 30px;
+
         }
+
+        .container {
+            border: 1px dashed royalblue;
+        }
+
         a {
             display: block;
             font-size: 30px;
             color: blue;
+            width: 50%;
         }
     </style>
 </head>
+
 <body>
-{{#each files}}
-    <a href="{{../dir}}/{{file}}">[{{icon}}]{{file}}</a>
-{{/each}}
+    <div class='container'>
+        {{#each files}}
+        <a href="{{../dir}}/{{file}}">[{{icon}}]{{file}}</a>
+        {{/each}}
+    </div>
+
 </body>
+
 </html>
