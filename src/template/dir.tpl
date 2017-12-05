@@ -9,7 +9,7 @@
     <style>
         body {
             margin: 30px;
-
+            background-color:rgb(125, 184, 252);
         }
 
         .container {
@@ -19,7 +19,7 @@
         a {
             display: block;
             font-size: 30px;
-            color: blue;
+            color: white;
             width: 50%;
         }
     </style>
